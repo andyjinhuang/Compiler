@@ -1,15 +1,14 @@
 loadI 1024 => r0
 loadI 5 => r1
-storeAI r97 => r1, 1048575
+storeAI r1 => r0, 0
 loadAI r0, 0 => r2
 loadI 4 => r3
 mult r2, r3 => r4
-storeAI r98 => r4, 1048575
+storeAI r4 => r4, 0
 loadI 3 => r5
 loadAI r0, 0 => r6
 loadI 2 => r7
 add r6, r7 => r8
 mult r5, r8 => r9
-storeAI r97 => r9, 1048575
-outputAI r97, 1048575
-loadI 46 => r10
+storeAI r9 => r0, 0
+outputAI r0, 0

@@ -194,7 +194,7 @@ static void assign()
 		}
 	next_token();
 	reg=expr();
-	CodeGen(STOREAI,var,reg,EMPTY_FIELD);
+	CodeGen(STOREAI,reg,(var-'a')*4,0);
 
 }
 
@@ -205,7 +205,7 @@ static void print()
 			ERROR("Program error.  Current input symbol is %c\n", token);
 		    exit(EXIT_FAILURE);
 		    }
-		CodeGen(OUTPUTAI,token,EMPTY_FIELD,EMPTY_FIELD);
+		CodeGen(OUTPUTAI, 0, (token-'a')*4, EMPTY_FIELD);
 		next_token();
 }
 
@@ -256,17 +256,12 @@ static void stmtlist()
 
 static void program()
 {
-	int reg;
 	stmtlist();
 	
 	if (token != '.')  {
 	  ERROR("Program error.  Current input symbol is %c\n", token);
 	  exit(EXIT_FAILURE);
 	 }
-	else{
-		reg=next_register();
-		CodeGen(LOADI, token, reg, EMPTY_FIELD);
-		}
 }
 
 /*************************************************************************/
