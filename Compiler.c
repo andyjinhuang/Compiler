@@ -194,7 +194,7 @@ static void assign()
 		}
 	next_token();
 	reg=expr();
-	CodeGen(STOREAI,reg,(var-'a')*4,0);
+	CodeGen(STOREAI,reg,0,(var-'a')*4);
 
 }
 
