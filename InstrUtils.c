@@ -69,8 +69,13 @@ void PrintInstructionList(FILE * outfile, Instruction * instr)
 		ERROR("No instructions\n");
 		exit(EXIT_FAILURE);
 	}
-
-	/* YOUR CODE GOES HERE */
+	
+	Instruction *temp=instr;
+	
+	while(temp!=NULL) {
+		PrintInstruction(stdout,temp);
+		temp=temp->next;
+		}
 
 }
 
