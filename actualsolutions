@@ -1,0 +1,91 @@
+loadI 1024 => r0
+loadI 5 => r1
+storeAI r1 => r0, 0
+loadI 3 => r5
+loadAI r0, 0 => r6
+loadI 2 => r7
+add r6, r7 => r8
+mult r5, r8 => r9
+storeAI r9 => r0, 0
+outputAI r0, 0
+
+loadI 1024 => r0
+loadI 3 => r1
+storeAI r1 => r0, 0
+loadI 4 => r2
+storeAI r2 => r0, 4
+loadI 3 => r3
+loadAI r0, 0 => r4
+loadAI r0, 4 => r5
+mult r4, r5 => r6
+add r3, r6 => r7
+storeAI r7 => r0, 8
+loadAI r0, 8 => r8
+loadI 1 => r9
+add r8, r9 => r10
+storeAI r10 => r0, 12
+outputAI r0, 12
+
+
+loadI 1024 => r0
+loadI 5 => r1
+storeAI r1 => r0, 0
+loadI 1 => r2
+loadI 2 => r3
+loadAI r0, 0 => r4
+add r3, r4 => r5
+add r2, r5 => r6
+loadI 5 => r7
+mult r6, r7 => r8
+loadI 8 => r9
+sub r8, r9 => r10
+storeAI r10 => r0, 4
+outputAI r0, 4
+
+
+loadI 1024 => r0
+loadI 6 => r8
+loadI 4 => r9
+div r8, r9 => r10
+storeAI r10 => r0, 12
+outputAI r0, 12
+
+loadI 1024 => r0
+loadI 0 => r1
+storeAI r1 => r0, 0
+loadI 1 => r2
+storeAI r2 => r0, 4
+loadI 3 => r3
+loadAI r0, 0 => r4
+loadAI r0, 4 => r5
+mult r4, r5 => r6
+add r3, r6 => r7
+storeAI r7 => r0, 8
+loadAI r0, 8 => r8
+loadI 1 => r9
+add r8, r9 => r10
+storeAI r10 => r0, 12
+outputAI r0, 12
+
+
+
+loadI 1024 => r0
+loadI 1 => r1
+storeAI r1 => r0, 0
+loadI 2 => r2
+storeAI r2 => r0, 4
+loadI 3 => r5
+loadAI r0, 0 => r6
+loadAI r0, 4 => r7
+mult r6, r7 => r8
+add r5, r8 => r9
+storeAI r9 => r0, 8
+loadAI r0, 8 => r10
+loadI 1 => r11
+add r10, r11 => r12
+storeAI r12 => r0, 12
+outputAI r0, 12
+
+
+
+
