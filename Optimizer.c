@@ -65,8 +65,10 @@ int main()
 											
 			else if(temp->opcode==2) {						 	//STOREAI
 					 if(mem[temp->field2+temp->field3]==1) { 	//For store, see if memory we are storing in important. If not, it isnt critical
+							mem[temp->field2+temp->field3]=0;
 							regs[temp->field1]=1;			 	//mark the register 
 							temp->critical='c';					//mark it critical
+
 						}		
 				}
 				
